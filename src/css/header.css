@@ -2,9 +2,19 @@ header{
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid white;
-    width: 95vw;
+    width: 98vw;
     padding: .5rem 1rem;
+    align-items: center;
+    flex-direction: column;
+    position: sticky;
+}
+
+header .header1{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+    padding: .5rem 1rem;
+    width: 100%;
     align-items: center;
 }
 
@@ -27,7 +37,7 @@ header .contacts{
     position: absolute;
     left: 0;
     top: 0;
-    animation: btnanime 1s linear infinite;
+    animation: btnanime 1.2s linear infinite;
 }
 
 .right-icon{
@@ -39,14 +49,47 @@ header .contacts{
     transform: translateX(4px);
 }
 
+.header2{
+    display: flex;
+    gap: 20vw;
+    align-items: center;
+    width: 100%;
+}
+
+.header2 h1{
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+}
+
+.header2 img{
+    width: 3.3rem;
+}
+
+.header2 ul {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+    font-size: 1.3rem;
+}
+
+.header2 ul a{
+    color: white;
+}
+
+.header2 ul a:hover{
+    color: white;
+    text-decoration: underline;
+}
+
 @keyframes btnanime {
     0%{
-        transform: translateX(-15px);
+        transform: translateX(-10px);
     }
     50%{
-        transform: translateX(15px);
+        transform: translateX(22px);
     }
     100%{
-        transform: translateX(-15px);
+        transform: translateX(-10px);
     }
 }

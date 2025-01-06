@@ -1,18 +1,31 @@
+import { useState } from 'react'
+import '../css/Hero.css'
+
 const Hero = () => {
+    // Heading for carousel
+    const heroHeadingArr = [{
+        imgSource: "../assets/v1.mp4",
+        h1: "All Your Information in One Place",
+        h2: "Simplify Management with a Unified Data Platform."
+    },
+    {
+        imgSource: "../assets/v2.mp4",
+        h1: "Lower Costs, Higher Value",
+        h2: "Offering Premium Features at a Fraction of the Price."
+    },
+    {
+        imgSource: "../assets/v3.mp4",
+        h1: "Access Anytime, Anywhere",
+        h2: "Empowering You with Data on Demand Across Devices."
+    }
+    ]
+    const [heroheading, setHeroHeading] = useState({})
 
     return (
         <section className="hero">
-            <div>
-                <h1><img src="https://a2developers.org/images/logo1.png" alt="a2Developer" />A2 Developers</h1>
-                <nav>
-                    <ul>
-                        <li> <a href="#">Home</a></li>
-                        <li> <a href="#">About</a></li>
-                        <li> <a href="#">Product</a></li>
-                        <li> <a href="#">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
+           <video autoPlay loop>
+            <source src='../assets/v1.mp4' type='video/mp4'/>
+           </video>
         </section>
     )
 }
