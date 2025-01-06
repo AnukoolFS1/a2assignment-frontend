@@ -1,5 +1,4 @@
 import '../css/header.css'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const Header = () => {
 
