@@ -1,14 +1,41 @@
 .hero {
-    width: 95vw;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
+    width: 100vw;
     padding: .5rem 2rem;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-
+.heror{
+    flex-direction: column;
+    align-items: center;
+}
 
 video{
-    width: 98.9vw;
     position: absolute;
-    z-index: -1;
+    z-index: -2;
     top: 0;
-    left: 0vw;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    animation: video .5s 1 forwards linear ;
 }
+
+@keyframes video {
+    from{
+        filter: brightness(2);
+        opacity: .5;
+    }
+    to{
+        filter: brightness(1);
+        opacity: 1;
+    }
+}
+
+  

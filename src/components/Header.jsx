@@ -14,8 +14,8 @@ const Header = () => {
                     <button className='btnanim'>Book A Demo</button>
                 </div>
                 <div className='contacts'>
-                    <a href="tel:+918081638914"><i class="fa-solid fa-phone"></i> +91 80816 38914 </a>
-                    <a href="mailto:contactus@a2developers.org"><i class="fa-solid fa-envelope"></i> contactus@a2developers.org </a>
+                    <a href="tel:+918081638914"><i className="fa-solid fa-phone"></i> +91 80816 38914 </a>
+                    <a href="mailto:contactus@a2developers.org"><i className="fa-solid fa-envelope"></i> contactus@a2developers.org </a>
                 </div>
             </div>
             <div className='header2'>
