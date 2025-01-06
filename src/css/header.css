@@ -1,6 +1,52 @@
 header{
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    border: 1px solid white;
-    width: 100vw;
+    border-bottom: 1px solid white;
+    width: 95vw;
+    padding: .5rem 1rem;
+    align-items: center;
+}
+
+header a{
+    font-size: 1.1rem;
+}
+
+header .contacts{
+    display: flex;
+    gap: 2rem;
+}
+
+.bookdemo{
+    position: relative;
+}
+
+.btnanim{
+    background-color: #60a5fa;
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation: btnanime 1s linear infinite;
+}
+
+.right-icon{
+    display: inline-block;
+    height: 10px;
+    width: 8px;
+    background-color: white;
+    clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+    transform: translateX(4px);
+}
+
+@keyframes btnanime {
+    0%{
+        transform: translateX(-15px);
+    }
+    50%{
+        transform: translateX(15px);
+    }
+    100%{
+        transform: translateX(-15px);
+    }
 }

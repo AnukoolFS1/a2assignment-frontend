@@ -6,15 +6,15 @@ const Header = () => {
 
     return (
         <header>
-            <div>
+            <div className='bookdemo'>
                 <button>
-                    Book A Demo
+                    Book A Demo <span className='right-icon'></span>
                 </button>
-                <div></div>
+                <button className='btnanim'>Book A Demo</button>
             </div>
-            <div>
+            <div className='contacts'>
                 <a href="tel:+918081638914"><i class="fa-solid fa-phone"></i> +91 80816 38914 </a>
-                <a href="mailto:contactus@a2developers.org"><FontAwesomeIcon icon="fa-regular fa-envelope" /> contactus@a2developers.org </a>
+                <a href="mailto:contactus@a2developers.org"><i class="fa-solid fa-envelope"></i> contactus@a2developers.org </a>
             </div>
         </header>
     )
