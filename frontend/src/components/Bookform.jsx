@@ -5,7 +5,7 @@ const Bookform = () => {
 
     return (
         <form className="form">
-            <h2>Get In Touch <span ><i class="fa-solid fa-xmark"></i></span></h2>
+            <h2>Get In Touch <span><i class="fa-solid fa-xmark"></i></span></h2>
             <p>Have questions about our Products? Fill out the form below to get a call with us.</p>
             <Input name={"Name"} />
             <Input name={"Email"} />
