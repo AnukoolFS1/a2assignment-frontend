@@ -1,10 +1,12 @@
 const Formdata = require("../model/formdata");
 
+// error handling in case of the error
 const errorHandle = (err, res) => {
     console.error(err);
     res.status(500).json({ msg: "Internal server err" })
 }
 
+// form data handling
 const handleFormData = async (req, res) => {
     const data = req.body;
     try {
@@ -16,6 +18,8 @@ const handleFormData = async (req, res) => {
     }
 }
 
+
+// query controller
 const getRequirements = async (req, res) => {
     try {
         const data = await Formdata.find();
