@@ -3,7 +3,7 @@ import '../css/form.css';
 import { useState } from "react";
 import axios from "axios"
 
-const Bookform = () => { 
+const Bookform = ({formState, setFormState}) => { 
     const [formdata, setFormdata] = useState({
         name: "",
         email:"",
@@ -27,8 +27,8 @@ const Bookform = () => {
     }
 
     return (
-        <form className="form" onSubmit={submitData}>
-            <h2>Get In Touch <span><i className="fa-solid fa-xmark"></i></span></h2>
+        <form className="form" onSubmit={submitData} style={{display: formState? "block" : "none"}}>
+            <h2>Get In Touch <span onClick={() => setFormState(false)} style={{cursor:"pointer"}}><i className="fa-solid fa-xmark"></i></span></h2>
             <p>Have questions about our Products? Fill out the form below to get a call with us.</p>
             <Input title={"Name"} name={"name"} updateForm={updateForm} />
             <Input title={"Email"} name={"email"} updateForm={updateForm} />

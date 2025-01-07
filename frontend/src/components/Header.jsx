@@ -1,13 +1,13 @@
 import '../css/header.css'
 
-const Header = () => {
+const Header = ({setFormState}) => {
 
 
     return (
         <header>
             <div className='header1'>
                 <div className='bookdemo'>
-                    <button>
+                    <button onClick={() => setFormState(prev => !prev)}>
                         Book A Demo <span className='right-icon'></span>
                     </button>
                     <button className='btnanim'>Book A Demo</button>
