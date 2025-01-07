@@ -1,14 +1,15 @@
 require('dotenv').config()
 const express = require('express');
 const app = express();
-const connect = require('./db/db')
+const connect = require('./db/db');
+const router = require('./routes/route');
 
+// deciding the port with env
 const PORT = process.env.PORT || 4400;
 
+// db connection
 connect()
 
-app.get("/", (req, res) => {
-    res.status(200).json({msg:"response from the server"})
-});
+app.get("/", router);
 
 app.listen(PORT, () => console.log('server is running'))
