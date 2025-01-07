@@ -1,4 +1,4 @@
-const Input = ({ title, textArea, updateForm, name }) => {
+const Input = ({ title, textArea, updateForm, name }) => { 
 
     return (
         <div className="input">

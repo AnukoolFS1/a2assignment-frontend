@@ -5,8 +5,8 @@ import video1 from '../assets/v1.mp4';
 import video2 from '../assets/v2.mp4';
 import video3 from '../assets/v3.mp4';
 
-const Hero = ({setFormState}) => {
-    const heroHeadingArr = [{
+const Hero = ({setFormState}) => { // passed to Header Component
+    const heroHeadingArr = [{ // carousel data
         vidSource: video1,
         h1: "All Your Information in One Place",
         h2: "Simplify Management with a Unified Data Platform."
@@ -22,14 +22,14 @@ const Hero = ({setFormState}) => {
         h2: "Empowering You with Data on Demand Across Devices."
     }
     ]
-    const [carouselUpdater, setCarouselUpdater] = useState(0);
-    const videoref = useRef(null);
+    const [carouselUpdater, setCarouselUpdater] = useState(0); // for handling the carousel movement
+    const videoref = useRef(null); // reference for the video to fast is runtime
 
     useEffect(() => {
         const videoElement = videoref.current;
-        videoElement.playbackRate = 1.5
+        videoElement.playbackRate = 1.5; // speeding the playback of the videos
         const timer = setInterval(() => {
-            setCarouselUpdater((prev) => (prev + 1) % heroHeadingArr.length);
+            setCarouselUpdater((prev) => (prev + 1) % heroHeadingArr.length); // updating the caraousel for each 7 secs
         }, 7000)
 
         return () => clearInterval(timer);

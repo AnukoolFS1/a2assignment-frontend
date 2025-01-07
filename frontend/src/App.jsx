@@ -3,7 +3,7 @@ import Hero from './components/Hero'
 import BookForm from './components/Bookform'
 
 function App() {
-  const [formState, setFormState] = useState(false)
+  const [formState, setFormState] = useState(false) // state for form display
 
   return (
     <section>

@@ -7,7 +7,7 @@ const Header = ({setFormState}) => {
         <header>
             <div className='header1'>
                 <div className='bookdemo'>
-                    <button onClick={() => setFormState(prev => !prev)}>
+                    <button onClick={() => setFormState(prev => !prev)}> {/* toggling the form on/off display*/}
                         Book A Demo <span className='right-icon'></span>
                     </button>
                     <button className='btnanim'>Book A Demo</button>

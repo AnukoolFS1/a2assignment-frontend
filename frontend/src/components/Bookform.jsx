@@ -4,7 +4,7 @@ import { useState } from "react";
 import axios from "axios"
 
 const Bookform = ({formState, setFormState}) => { 
-    const [formdata, setFormdata] = useState({
+    const [formdata, setFormdata] = useState({ // formbase state
         name: "",
         email:"",
         contactNumber: "",
@@ -12,6 +12,7 @@ const Bookform = ({formState, setFormState}) => {
         requirements:""
     })
 
+    // handling the inputs which has passed to the components in ui
     const updateForm = (e) => {
         setFormdata(prev => {
             return {...prev, [e.target.name]: e.target.value}
@@ -19,6 +20,7 @@ const Bookform = ({formState, setFormState}) => {
         console.log(formdata)
     }
 
+    // On submission of form
     const submitData = async (e) => {
         e.preventDefault();
 
@@ -27,7 +29,7 @@ const Bookform = ({formState, setFormState}) => {
     }
 
     return (
-        <form className="form" onSubmit={submitData} style={{display: formState? "block" : "none"}}>
+        <form className="form" onSubmit={submitData} style={{display: formState? "flex" : "none"}}>
             <h2>Get In Touch <span onClick={() => setFormState(false)} style={{cursor:"pointer"}}><i className="fa-solid fa-xmark"></i></span></h2>
             <p>Have questions about our Products? Fill out the form below to get a call with us.</p>
             <Input title={"Name"} name={"name"} updateForm={updateForm} />
