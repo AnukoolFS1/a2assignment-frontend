@@ -16,7 +16,7 @@ const formdata = new Schema({
     institutionName:{
         type:String
     },
-    requirement: {
+    requirements: {
         type:String,
         required: true
     },

@@ -1,12 +1,12 @@
-const Input = ({name, textArea}) => {
+const Input = ({ title, textArea, updateForm, name }) => {
 
     return (
         <div className="input">
-            <label htmlFor={name}>{name} *</label>
-            {textArea?
-            <textarea placeholder={name} rows={4}></textarea>
-            :<input type="text" placeholder={name} name={name} id={name} />
-        }
+            <label htmlFor={title}>{title} *</label>
+            {textArea ?
+                <textarea placeholder={title} onChange={updateForm} name={name} rows={4}></textarea>
+                : <input type="text" placeholder={title} onChange={updateForm} name={name} id={title} />
+            }
         </div>
     )
 }
